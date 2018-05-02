@@ -8,7 +8,19 @@
     <a class="text-blue hover:text-blue-darker" href="#">Link</a>
   </li>
   <li class="mr-6">
-    <a class="text-blue hover:text-blue-darker" href="#">Link</a>
+    <dropdown>
+      <a slot="link" class="text-blue hover:text-blue-darker" href="#">
+        Link
+
+        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+        </svg>
+      </a>
+
+      <div slot="dropdown-items" class="bg-white shadow border overflow-hidden w-32 ">
+        <%= link_to "Blog", "#", class: "no-underline block px-4 py-3 border-b text-grey-darkest bg-white hover:text-white hover:bg-blue" %>
+      </div>
+    </dropdown>
   </li>
   <li class="mr-6">
     <a class="text-grey-light cursor-not-allowed" href="#">Disabled</a>
