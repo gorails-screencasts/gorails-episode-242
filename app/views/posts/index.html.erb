@@ -1,0 +1,22 @@
+<h1 class="mb-2">Posts</h1>
+
+<ul class="list-reset flex mb-4">
+  <li class="mr-6">
+    <a class="text-blue hover:text-blue-darker" href="#">Active</a>
+  </li>
+  <li class="mr-6">
+    <a class="text-blue hover:text-blue-darker" href="#">Link</a>
+  </li>
+  <li class="mr-6">
+    <a class="text-blue hover:text-blue-darker" href="#">Link</a>
+  </li>
+  <li class="mr-6">
+    <a class="text-grey-light cursor-not-allowed" href="#">Disabled</a>
+  </li>
+</ul>
+
+<% @posts.each do |post| %>
+  <h2 class="mb-4"><%= link_to post.title, post %></h2>
+<% end %>
+
+<%= link_to 'New Post', new_post_path %>
